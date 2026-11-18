@@ -7,7 +7,7 @@ number: 6
 date: 2026-11-28T13:30:00
 sort_at: 2026-11-28T13:30:00
 title: "Lecture 6"
-subtitle: "S6 · Transformers and LLMs"
+subtitle: "S6 · Transformer block"
 location: "Room 3.30, Hertie School, Friedrichstraße 180"
 tabs: [lecture]
 no_materials: true
