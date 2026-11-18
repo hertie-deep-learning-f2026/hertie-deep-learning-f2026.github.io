@@ -6,11 +6,19 @@ kind: lecture
 number: 1
 date: 2026-11-21T10:00:00
 sort_at: 2026-11-21T10:00:00
+released_at: 2026-11-18T14:19:52
 title: "Lecture 1"
 subtitle: "S0 · Intro and outline; S1 · What is deep learning?"
 location: "Room 3.30, Hertie School, Friedrichstraße 180"
 tabs: [lecture]
-unreleased: true
-links: []
+links:
+    - url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/01_intro-what-is-dl/handout.html
+      view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/01_intro-what-is-dl/handout.html
+      name: "handout.html"
+      section: "lecture"
+    - url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/01_intro-what-is-dl/slides.html
+      view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/01_intro-what-is-dl/slides.html
+      name: "slides.html"
+      section: "lecture"
 ---
-_**Materials for lecture 1 are not yet released** - they will appear in `materials/lectures/01_intro-what-is-dl` when they are._
+
