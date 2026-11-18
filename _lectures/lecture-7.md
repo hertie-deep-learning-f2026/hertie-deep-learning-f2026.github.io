@@ -7,7 +7,7 @@ number: 7
 date: 2026-11-28T15:30:00
 sort_at: 2026-11-28T15:30:00
 title: "Lecture 7"
-subtitle: "S7 · LLMs [bonus] (a brief look)"
+subtitle: "S7 · LLMs"
 location: "Room 3.30, Hertie School, Friedrichstraße 180"
 tabs: [lecture]
 no_materials: true
