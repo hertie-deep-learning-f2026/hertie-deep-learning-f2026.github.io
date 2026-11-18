@@ -2,6 +2,31 @@
 # file, nested as its repo has it. Edit nothing here; it is rewritten on every sync.
 repos: ["materials"]
 sections:
+  - name: "lab-series"
+    files: 11
+    entries:
+      - name: "lab-01_python-foundations.ipynb"
+        url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lab-series/lab-01_python-foundations.ipynb
+      - name: "lab-02_feedforward-networks.ipynb"
+        url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lab-series/lab-02_feedforward-networks.ipynb
+      - name: "lab-03_training-diagnostics.ipynb"
+        url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lab-series/lab-03_training-diagnostics.ipynb
+      - name: "lab-04_cnns.ipynb"
+        url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lab-series/lab-04_cnns.ipynb
+      - name: "lab-05_modern-cnns-transfer.ipynb"
+        url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lab-series/lab-05_modern-cnns-transfer.ipynb
+      - name: "lab-06_rnn-foundations.ipynb"
+        url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lab-series/lab-06_rnn-foundations.ipynb
+      - name: "lab-07_lstm-gru.ipynb"
+        url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lab-series/lab-07_lstm-gru.ipynb
+      - name: "lab-08_seq2seq-attention.ipynb"
+        url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lab-series/lab-08_seq2seq-attention.ipynb
+      - name: "lab-09_transformers.ipynb"
+        url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lab-series/lab-09_transformers.ipynb
+      - name: "lab-10_finetuning-evaluation-mlops.ipynb"
+        url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lab-series/lab-10_finetuning-evaluation-mlops.ipynb
+      - name: "README.md"
+        url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lab-series/README.md
   - name: "lectures"
     files: 4
     entries:
