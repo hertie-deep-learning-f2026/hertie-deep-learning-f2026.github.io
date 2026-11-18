@@ -1,0 +1,70 @@
+# INSTRUCTOR-OWNED - yours to edit freely; edits here are not overwritten. Seeded once by
+# the DSL course sync; the keys it owns are named below and rewritten on every run.
+# Edit the fields below for your course - EXCEPT the course-identity keys the DSL
+# course sync owns and rewrites on every run: `collections`, `course_code`, `course_name`, `course_semester`, `dateformat`, `defaults`, `github_org`, `remote_theme`, `title`.
+# Change those in the course org's .github/course.yml instead.
+
+# --- Course identity ---
+course_name: "Deep Learning"
+# The same name under Jekyll's own key, which the theme and the feed fall back to.
+# managed by the DSL course sync - rewritten on every run
+title: "Deep Learning"
+course_description: "One paragraph description of the course."
+course_semester: "Fall 2026"
+course_code: "E1394"
+github_org: "hertie-deep-learning-f2026"
+
+# --- Institution ---
+schoolname: "Hertie School"
+schoolurl: "https://hertie-school.org/en/datasciencelab"
+dsl_org_url: "https://github.com/hertie-data-science-lab"
+address: |
+    Data Science Lab
+    Hertie School
+    Friedrichstraße 180
+    10117 Berlin, Germany
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+
+baseurl: ""
+url: ""
+
+markdown: kramdown
+permalink: blog/:year/:month/:title
+excerpt_separator: "<!--more-->"
+
+include: ['_images']
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - .bundle
+
+future: true
+
+# managed by the DSL course sync - rewritten on every run
+remote_theme: "hertie-data-science-lab/dsl-jekyll-theme@c33c9b7e471914cb8014a09a12710cb98819e0d9"
+
+# managed by the DSL course sync - rewritten on every run
+dateformat: "%d/%m/%Y"
+
+# managed by the DSL course sync - rewritten on every run
+collections:
+  events:
+    output: true
+  lectures:
+    output: true
+  assignments:
+    output: true
+  announcements:
+    output: false
+
+# managed by the DSL course sync - rewritten on every run
+defaults:
+  - scope:
+      path: ""
+      type: "assignments"
+    values:
+      layout: "assignment"

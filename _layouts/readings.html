@@ -1,0 +1,41 @@
+---
+# SYSTEM-OWNED - do not edit. Written by the DSL course sync from templates/site/ in the
+# toolkit; every sync rewrites it.
+layout: page
+---
+
+{{ content }}
+
+{% comment %}
+Readings, session by session - the same block as Lectures and Labs, with the citation list
+passed in as `extra` so it sits where a session's details do.
+
+Two things can be true of a session here, and the page shows whichever apply:
+
+  reading_list      the citation text the teaching team wrote, inlined verbatim from the
+                    released `readings/NN_.../` folder. Its own headings arrive already
+                    demoted (site.py), so `## Required Readings` nests under the session
+                    heading instead of outranking it.
+  reading links   the reading files themselves - the entry's links whose `section` is
+                    "reading". On a SEMESTER site they point into the private materials repo,
+                    so only enrolled members can open one; on the public open-courseware
+                    site they are hosted deliberately. Which of the two it is decides the
+                    page's own intro line, so this layout claims neither.
+
+The open-courseware site's page; a semester site lists readings on its kind tab
+(`kind.html`). A session with neither does not appear.
+{% endcomment %}
+{% assign entries = site.lectures | sort: 'date' %}
+{% assign shown = 0 %}
+{% for entry in entries %}
+{% capture has_files %}{% for link in entry.links %}{% if link.section == "reading" %}x{% endif %}{% endfor %}{% endcapture %}
+{% if entry.reading_list or has_files != "" %}
+{% if shown > 0 %}<hr class="session-rule"/>{% endif %}
+{% assign shown = shown | plus: 1 %}
+<section class="session">
+{% capture citations %}{% if entry.reading_list %}<div class="reading-list markdown-content">{{ entry.reading_list | markdownify }}</div>{% endif %}{% endcapture %}
+{% include session_entry.html entry=entry section="reading" extra=citations %}
+</section>
+{% endif %}
+{% endfor %}
+{% if shown == 0 %}<p>No readings released yet.</p>{% endif %}

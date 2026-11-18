@@ -1,0 +1,79 @@
+{%- comment -%}
+SYSTEM-OWNED - do not edit. Written by the DSL course sync from templates/site/ in the
+toolkit; every sync rewrites it.
+{%- endcomment -%}
+{%- comment -%}
+The Updates box announces content that has actually REACHED students: rows of every
+kind whose materials shipped (one with `show_on_site: false` excepted), assignments whose repos are handed out, and hand-written
+entries in _announcements. Display-only schedule rows (exams, special events, term dates)
+live in site.events and are deliberately left out - they are not news, and several carry
+no text to show.
+
+The one exception is a row the generator has flagged `announce: true` - currently the
+archive row, for the fortnight before the whole semester goes read-only. That IS news, and
+it is the only warning a student gets. The flag is written by dsl_course/site.py
+only inside its window and the collection is rewritten on every sync, so the bullet
+disappears on its own.
+
+The release flags are what make that true. A session the plan names but whose files have
+not shipped is written with `unreleased: true`, and an assignment whose repos are not
+handed out with `handout_pending: true` (dsl_course/site.py) - and the WHOLE term is on
+the schedule from the day the plan is written. So an unfiltered box, sorted newest-first,
+announced the last week of term as "New Lab is up" before week one had happened. Filtered
+BEFORE the limit, not inside the loop: dropping a placeholder's bullet after the fact
+would leave the box showing one real update out of seven, or none at all. A `dateless` row
+(`event_datetime: tbc`) whose files have shipped IS news, announced at the moment they first
+landed: the generator writes that moment as its `date:` and flags it `announce: true`. One
+without the flag stays out - unreleased, or GitHub could not say when it landed - since
+Jekyll dates a row with no `date:` at build time, which would put it at the top. A
+`no_materials` row is never news: it ships nothing (an entry with no `files`); nor is an
+entry's second slot (`repeat`): its files shipped once, with the first.
+{%- endcomment -%}
+{%- comment -%}
+Two chains joined, not one `or` inside `where_exp`: live sites built with the github-pages
+gem run Jekyll 3.10 / Liquid 4.0.4, whose `where_exp` cannot parse a boolean operator.
+{%- endcomment -%}
+{%- assign shipped = site.lectures | where_exp: "entry", "entry.unreleased != true" | where_exp: "entry", "entry.no_materials != true" | where_exp: "entry", "entry.off_schedule != true" | where_exp: "entry", "entry.repeat != true" -%}
+{%- assign dated_sessions = shipped | where_exp: "entry", "entry.dateless != true" -%}
+{%- assign announced_tbc = shipped | where_exp: "entry", "entry.dateless == true" | where_exp: "entry", "entry.announce == true" -%}
+{%- assign released_sessions = dated_sessions | concat: announced_tbc -%}
+{%- assign released_assignments = site.assignments | where_exp: "entry", "entry.handout_pending != true" -%}
+{%- assign all_events = released_sessions | concat: released_assignments -%}
+{%- assign archiving = site.events | where_exp: "entry", "entry.announce == true" -%}
+{%- assign all_events = all_events | concat: archiving -%}
+{%- assign all_events = all_events | concat: site.announcements -%}
+{%- assign all_events_sorted = all_events | sort: 'date' | reverse -%}
+
+{%- if all_events_sorted.size > 0 %}
+<div class="announcement-box" style="margin-top:30px">
+<h2>Updates</h2>
+<ul>
+    {%- for n in all_events_sorted limit:7 -%}
+    {%- capture bullet -%}
+        {%- if n.collection == 'lectures' -%}
+            {%- assign kind = site.data.kinds | where: "key", n.kind | first -%}
+            {%- assign noun = kind.label | default: n.kind | downcase -%}
+            {%- assign verb = "is" -%}
+            {%- if n.kind == 'readings' -%}{%- assign verb = "are" -%}{%- endif -%}
+            New {{ noun }} {{ verb }} up: {{ n.title }} {% include lecture_links.html lecture=n %}
+        {%- elsif n.kind == 'assignment' -%}
+            New Assignment released: [<a href="{{ n.url | prepend: site.baseurl }}">{{ n.title }}</a>]
+        {%- else -%}
+            {%- comment -%}
+            A hand-written `_announcements/` entry, or the archive row. `details` first,
+            because that is the one key every generated row writes its prose into - and
+            markdownified, since front matter is raw markdown, unlike `content`, which
+            Jekyll has already rendered. `content` is the fallback for an entry that
+            writes its text as a body instead, which a hand-written one may.
+            {%- endcomment -%}
+            {%- if n.details -%}{{ n.details | markdownify }}{%- else -%}{{- n.content -}}{%- endif -%}
+        {%- endif -%}
+    {%- endcapture -%}
+    {%- assign bullet = bullet | strip -%}
+    {%- if bullet != "" %}
+    <li class="no-p-margin">{{ bullet }}</li>
+    {%- endif -%}
+    {%- endfor %}
+</ul>
+</div>
+{%- endif -%}
