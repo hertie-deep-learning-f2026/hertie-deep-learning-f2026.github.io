@@ -4,12 +4,12 @@
 
 instructor:
   name: "Henry Baker"
-  profile_pic: "https://weizenbaum-institut.de/en/portrait/p/henry-baker"
+  profile_pic: "https://github.com/henrycgbaker.png"
   webpage: ""
 
 instructors:
   - name: "Henry Baker"
-    profile_pic: "https://weizenbaum-institut.de/en/portrait/p/henry-baker"
+    profile_pic: "https://github.com/henrycgbaker.png"
     webpage: ""
     role: "instructor"
 
