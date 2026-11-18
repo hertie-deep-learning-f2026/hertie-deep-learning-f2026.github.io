@@ -10,7 +10,7 @@ title: "Lecture 4"
 subtitle: "S4 · Spatial data and CNNs"
 location: "Room 3.30, Hertie School, Friedrichstraße 180"
 tabs: [lecture]
-no_materials: true
+unreleased: true
 links: []
 ---
-
+_**Materials for lecture 4 are not yet released** - they will appear in [`materials/lectures/04_spatial-data-cnns`](https://github.com/hertie-deep-learning-f2026/materials/tree/main/lectures) when they are._

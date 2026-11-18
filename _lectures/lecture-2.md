@@ -10,7 +10,7 @@ title: "Lecture 2"
 subtitle: "S2 · The engine I: inference"
 location: "Room 3.30, Hertie School, Friedrichstraße 180"
 tabs: [lecture]
-no_materials: true
+unreleased: true
 links: []
 ---
-
+_**Materials for lecture 2 are not yet released** - they will appear in [`materials/lectures/02_engine-inference`](https://github.com/hertie-deep-learning-f2026/materials/tree/main/lectures) when they are._
