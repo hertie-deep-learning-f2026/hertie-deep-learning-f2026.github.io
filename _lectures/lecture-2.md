@@ -6,11 +6,19 @@ kind: lecture
 number: 2
 date: 2026-11-21T11:00:00
 sort_at: 2026-11-21T11:00:00
+released_at: 2026-11-18T16:17:31
 title: "Lecture 2"
 subtitle: "S2 · The engine I: inference"
 location: "Room 3.30, Hertie School, Friedrichstraße 180"
 tabs: [lecture]
-unreleased: true
-links: []
+links:
+    - url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/02_engine-inference/handout.html
+      view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/02_engine-inference/handout.html
+      name: "handout.html"
+      section: "lecture"
+    - url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/02_engine-inference/slides.html
+      view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/02_engine-inference/slides.html
+      name: "slides.html"
+      section: "lecture"
 ---
-_**Materials for lecture 2 are not yet released** - they will appear in [`materials/lectures/02_engine-inference`](https://github.com/hertie-deep-learning-f2026/materials/tree/main/lectures) when they are._
+

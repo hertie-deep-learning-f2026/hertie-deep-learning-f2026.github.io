@@ -28,7 +28,7 @@ sections:
       - name: "README.md"
         url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lab-series/README.md
   - name: "lectures"
-    files: 4
+    files: 8
     entries:
       - name: "01_intro-what-is-dl/"
         url: https://github.com/hertie-deep-learning-f2026/materials/tree/main/lectures/01_intro-what-is-dl
@@ -40,6 +40,16 @@ sections:
           - name: "slides.html"
             url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/01_intro-what-is-dl/slides.html
             view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/01_intro-what-is-dl/slides.html
+      - name: "02_engine-inference/"
+        url: https://github.com/hertie-deep-learning-f2026/materials/tree/main/lectures/02_engine-inference
+        files: 2
+        entries:
+          - name: "handout.html"
+            url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/02_engine-inference/handout.html
+            view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/02_engine-inference/handout.html
+          - name: "slides.html"
+            url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/02_engine-inference/slides.html
+            view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/02_engine-inference/slides.html
       - name: "03_engine-training/"
         url: https://github.com/hertie-deep-learning-f2026/materials/tree/main/lectures/03_engine-training
         files: 2
@@ -50,3 +60,13 @@ sections:
           - name: "slides.html"
             url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/03_engine-training/slides.html
             view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/03_engine-training/slides.html
+      - name: "04_spatial-data-cnns/"
+        url: https://github.com/hertie-deep-learning-f2026/materials/tree/main/lectures/04_spatial-data-cnns
+        files: 2
+        entries:
+          - name: "handout.html"
+            url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/04_spatial-data-cnns/handout.html
+            view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/04_spatial-data-cnns/handout.html
+          - name: "slides.html"
+            url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/04_spatial-data-cnns/slides.html
+            view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/04_spatial-data-cnns/slides.html

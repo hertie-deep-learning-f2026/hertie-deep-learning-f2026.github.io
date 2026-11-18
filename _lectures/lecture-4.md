@@ -6,11 +6,19 @@ kind: lecture
 number: 4
 date: 2026-11-21T15:30:00
 sort_at: 2026-11-21T15:30:00
+released_at: 2026-11-18T16:17:31
 title: "Lecture 4"
 subtitle: "S4 · Spatial data and CNNs"
 location: "Room 3.30, Hertie School, Friedrichstraße 180"
 tabs: [lecture]
-unreleased: true
-links: []
+links:
+    - url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/04_spatial-data-cnns/handout.html
+      view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/04_spatial-data-cnns/handout.html
+      name: "handout.html"
+      section: "lecture"
+    - url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/04_spatial-data-cnns/slides.html
+      view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/04_spatial-data-cnns/slides.html
+      name: "slides.html"
+      section: "lecture"
 ---
-_**Materials for lecture 4 are not yet released** - they will appear in [`materials/lectures/04_spatial-data-cnns`](https://github.com/hertie-deep-learning-f2026/materials/tree/main/lectures) when they are._
+
