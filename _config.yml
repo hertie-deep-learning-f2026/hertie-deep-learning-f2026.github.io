@@ -9,7 +9,7 @@ course_name: "Deep Learning"
 # The same name under Jekyll's own key, which the theme and the feed fall back to.
 # managed by the DSL course sync - rewritten on every run
 title: "Deep Learning"
-course_description: "One paragraph description of the course."
+course_description: "A condensed, two-day introduction to Deep Learning for Master of Data Science students about to start their theses. Day 1 builds the foundations (what makes Deep Learning different, the training loop and backpropagation, making training work, convolutions and vision). Day 2 goes from sequences to attention and transformers, to pretrained models and LLMs in practice."
 course_semester: "Fall 2026"
 course_code: "E1394"
 github_org: "hertie-deep-learning-f2026"
