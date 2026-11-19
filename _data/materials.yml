@@ -28,7 +28,7 @@ sections:
       - name: "README.md"
         url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lab-series/README.md
   - name: "lectures"
-    files: 8
+    files: 10
     entries:
       - name: "01_intro-what-is-dl/"
         url: https://github.com/hertie-deep-learning-f2026/materials/tree/main/lectures/01_intro-what-is-dl
@@ -70,3 +70,13 @@ sections:
           - name: "slides.html"
             url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/04_spatial-data-cnns/slides.html
             view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/04_spatial-data-cnns/slides.html
+      - name: "04b_residual-connections/"
+        url: https://github.com/hertie-deep-learning-f2026/materials/tree/main/lectures/04b_residual-connections
+        files: 2
+        entries:
+          - name: "handout.html"
+            url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/04b_residual-connections/handout.html
+            view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/04b_residual-connections/handout.html
+          - name: "slides.html"
+            url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/04b_residual-connections/slides.html
+            view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/04b_residual-connections/slides.html
