@@ -4,8 +4,8 @@
 # semester-config/schedule.yml (dates, titles) or its org structure (what released).
 kind: lecture
 number: 4
-date: 2026-11-21T00:00:00
-sort_at: 2026-11-21T00:00:00
+date: 2026-11-21T18:00:00
+sort_at: 2026-11-21T18:00:00
 released_at: 2026-11-19T11:40:29
 title: "Lecture 4"
 subtitle: "S4 bonus · Residual connections"
