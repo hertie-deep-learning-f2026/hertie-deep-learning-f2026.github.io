@@ -20,13 +20,5 @@ links:
       view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/04_spatial-data-cnns/slides.html
       name: "slides.html"
       section: "lecture"
-    - url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/04b_residual-connections/handout.html
-      view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/04b_residual-connections/handout.html
-      name: "handout.html"
-      section: "lecture"
-    - url: https://github.com/hertie-deep-learning-f2026/materials/blob/main/lectures/04b_residual-connections/slides.html
-      view_url: https://hertie-deep-learning-f2026.github.io/files/materials/lectures/04b_residual-connections/slides.html
-      name: "slides.html"
-      section: "lecture"
 ---
 
