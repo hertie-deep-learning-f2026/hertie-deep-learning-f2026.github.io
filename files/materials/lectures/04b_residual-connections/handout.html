@@ -4402,7 +4402,7 @@ return!"\t\n\x0B\f\r                　\u2028\u2029
     (function () {
       var script = document.createElement("script");
       script.type = "text/javascript";
-      script.src  = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js";
+      script.src  = "https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js";
       document.getElementsByTagName("head")[0].appendChild(script);
     })();
   </script>
@@ -4582,19 +4582,6 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled" title="How to read this page">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>How to read this page
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This is the <strong>handout</strong> for these slides: a self-contained text you can read on its own. Each slide appears in turn, followed by an explanation that adds the detail and formalism the slide leaves out. The “Go deeper” boxes are closed by default: open one for a derivation, some history or a side topic, or skip it without losing the thread. Read it before the session, after it, or instead of it.</p>
-</div>
-</div>
 <section id="sec-04b" class="level1">
 <h1>S4 Bonus · Residual Connections</h1>
 <p><em>Residual connections came from ResNet (a CNN, 2015), but they are an important concept to understand: every transformer block wraps its attention and its MLP in one.</em></p>
@@ -4712,7 +4699,7 @@ H^{(\ell+1)} = H^{(\ell)} + F\!\left(H^{(\ell)}\right)
 </ul>
 </div>
 <div class="go-deeper callout callout-style-default callout-note callout-titled" title="Go deeper: the gradient highway, projection shortcuts, and ResNet-18">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4721,7 +4708,7 @@ H^{(\ell+1)} = H^{(\ell)} + F\!\left(H^{(\ell)}\right)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><p><strong>Gradient flow.</strong> For a chain of <span class="math inline">\(L\)</span> residual blocks,</p>
